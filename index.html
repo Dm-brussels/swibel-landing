@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0D0845">
+    <meta name="format-detection" content="telephone=no">
+    <title>Swibel | Expert-Comptable certifié pour PME, SA, SRL et Holdings à Bruxelles</title>
+    <meta name="description" content="Cabinet d'expertise comptable certifié ITAA à Bruxelles. Comptabilité, fiscalité et conseil stratégique pour sociétés SRL, SA, Holdings et professions libérales. Premier rendez-vous gratuit.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://swibel.be/onboarding">
+    
+    <!-- Preload & Preconnect -->
+    <link rel="preload" href="Francy.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    
+    <!-- Emplacement Google Tag Manager -->
+    <!-- 
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Francy', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#0D0845',
+                            primary: '#11086E',
+                            light: '#E1E6FC',
+                            offwhite: '#F5F5F5',
+                            cta: '#0071E3',
+                            ctaHover: '#005BB5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Francy';
+            src: url('Francy.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0D0845; }
+        ::-webkit-scrollbar-thumb { background: #11086E; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0071E3; }
+
+        /* Scroll-triggered fade-in animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.3s; }
+        .reveal-delay-3 { transition-delay: 0.45s; }
+
+        /* CTA button pulse glow */
+        @keyframes ctaPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 113, 227, 0.4); }
+            50% { box-shadow: 0 0 0 8px rgba(0, 113, 227, 0); }
+        }
+        .cta-pulse {
+            animation: ctaPulse 2.5s ease-in-out infinite;
+        }
+
+        /* Button scale on hover */
+        .btn-scale {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-scale:hover {
+            transform: scale(1.03);
+        }
+        .btn-scale:active {
+            transform: scale(0.98);
+        }
+
+        /* GPU acceleration for glassmorphism */
+        [class*="backdrop-blur"] {
+            will-change: backdrop-filter;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        /* Respect reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { transition: none; opacity: 1; transform: none; }
+            .cta-pulse { animation: none; }
+            .star-anim { opacity: 1 !important; }
+        }
+
+        /* Mobile tap target minimum 44px */
+        @media (max-width: 768px) {
+            input, button, a { min-height: 44px; }
+            textarea { min-height: 60px; }
+        }
+
+        /* Smooth scrolling for iOS */
+        html { -webkit-overflow-scrolling: touch; }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-brand-offwhite antialiased">
+
+    <!-- Google Tag Manager (noscript) -->
+    <!-- 
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    -->
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-[#0D0845] backdrop-blur-md border-b border-brand-primary/30 rounded-b-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <a href="https://swibel.be" target="_blank">
+                        <img src="Artboard 8@3x.png" alt="Swibel - Cabinet d'expertise comptable certifié ITAA à Bruxelles" class="h-8 md:h-10 w-auto object-contain" onerror="this.onerror=null; this.outerHTML='<span class=\'font-bold text-2xl tracking-tight text-white\'>Swibel.</span>'">
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="tel:+3228088963" class="flex items-center gap-2 text-sm font-bold text-white border border-brand-light/30 bg-brand-light/10 px-4 py-2 rounded-full hover:bg-brand-cta hover:border-brand-cta transition-all shadow-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        +32 2 808 89 63
+                    </a>
+                    <a href="#contact" class="bg-brand-cta text-white px-6 py-2.5 rounded hover:bg-brand-ctaHover transition shadow-lg shadow-brand-cta/30 text-sm font-semibold btn-scale">
+                        Nous contacter
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <a href="tel:+3228088963" class="flex items-center gap-2 px-4 py-2 border border-brand-light/30 bg-brand-light/10 text-white rounded-full hover:bg-brand-cta hover:border-brand-cta transition-all shadow-sm">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        <span class="text-sm font-bold">Appelez-nous</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-12 md:pt-32 md:pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-navy">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/95 to-brand-navy/80"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Copywriting -->
+                <div class="text-left relative">
+                    <!-- Logo filigrane -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+                        <img src="Artboard 8@3x2.png" alt="" class="w-[300px] md:w-[500px] h-auto opacity-[0.10] select-none" draggable="false" onerror="this.style.display='none'">
+                    </div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-light/10 border border-brand-light/20 text-brand-light text-sm font-semibold mb-6">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-light opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-light"></span>
+                        </span>
+                        Cabinet dédié aux sociétés
+                    </div>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 md:mb-6">
+                        L'Expertise Comptable & Fiscale au Service de <span class="text-brand-light">Votre Société.</span>
+                    </h1>
+                    <p class="text-base md:text-lg text-slate-300 mb-6 md:mb-8 max-w-xl leading-relaxed">
+                        Vous dirigez une société à Bruxelles ou en Belgique francophone ? Swibel gère l'intégralité de votre comptabilité et de votre fiscalité pour que vous puissiez vous concentrer sur ce qui compte : développer votre entreprise. <strong>Un expert-comptable certifié attitré, un bureau pour vous accueillir, zéro sous-traitance.</strong>
+                    </p>
+
+                    <!-- Social proof animé avec compteurs -->
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 md:mb-8 max-w-xl">
+                        <!-- Compteur Google 5/5 — style vitré -->
+                        <div class="flex items-center gap-4 bg-white/[0.06] backdrop-blur-xl border border-white/[0.12] rounded-2xl py-5 px-5 flex-1 shadow-[0_8px_32px_rgba(0,0,0,0.2)] ring-1 ring-white/[0.05]">
+                            <div class="relative w-16 h-16 flex-shrink-0">
+                                <svg class="w-16 h-16 -rotate-90" viewBox="0 0 64 64">
+                                    <circle cx="32" cy="32" r="28" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="5"/>
+                                    <circle cx="32" cy="32" r="28" fill="none" stroke="#22C55E" stroke-width="5" stroke-linecap="round"
+                                        stroke-dasharray="175.9" stroke-dashoffset="175.9"
+                                        class="counter-ring-google" style="filter: drop-shadow(0 0 6px rgba(34,197,94,0.4))"/>
+                                </svg>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                    <span class="text-xl font-bold text-white counter-google" style="text-shadow: 0 0 10px rgba(34,197,94,0.3)">0</span>
+                                    <span class="text-[8px] text-white/40 uppercase tracking-wider font-semibold">/5</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="flex gap-0.5 mb-1">
+                                    <svg class="w-3.5 h-3.5 text-amber-400 star-anim star-1" fill="currentColor" viewBox="0 0 20 20" style="opacity:0"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <svg class="w-3.5 h-3.5 text-amber-400 star-anim star-2" fill="currentColor" viewBox="0 0 20 20" style="opacity:0"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <svg class="w-3.5 h-3.5 text-amber-400 star-anim star-3" fill="currentColor" viewBox="0 0 20 20" style="opacity:0"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <svg class="w-3.5 h-3.5 text-amber-400 star-anim star-4" fill="currentColor" viewBox="0 0 20 20" style="opacity:0"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    <svg class="w-3.5 h-3.5 text-amber-400 star-anim star-5" fill="currentColor" viewBox="0 0 20 20" style="opacity:0"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                </div>
+                                <span class="text-xs font-bold text-white">Noté 5/5</span>
+                                <span class="text-[10px] text-white/40">sur Google</span>
+                            </div>
+                        </div>
+
+                        <!-- Compteur Fidélité 100% — style vitré -->
+                        <div class="flex items-center gap-4 bg-white/[0.06] backdrop-blur-xl border border-white/[0.12] rounded-2xl py-5 px-5 flex-1 shadow-[0_8px_32px_rgba(0,0,0,0.2)] ring-1 ring-white/[0.05]">
+                            <div class="relative w-16 h-16 flex-shrink-0">
+                                <svg class="w-16 h-16 -rotate-90" viewBox="0 0 64 64">
+                                    <circle cx="32" cy="32" r="28" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="5"/>
+                                    <circle cx="32" cy="32" r="28" fill="none" stroke="#22C55E" stroke-width="5" stroke-linecap="round"
+                                        stroke-dasharray="175.9" stroke-dashoffset="175.9"
+                                        class="counter-ring-fidelity" style="filter: drop-shadow(0 0 6px rgba(34,197,94,0.4))"/>
+                                </svg>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                    <div class="flex items-baseline">
+                                        <span class="text-xl font-bold text-white counter-fidelity" style="text-shadow: 0 0 10px rgba(34,197,94,0.3)">0</span>
+                                        <span class="text-[10px] font-bold text-white/40">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-xs font-bold text-white">Taux de fidélité</span>
+                                <span class="text-[10px] text-white/40 leading-tight mt-0.5">La meilleure preuve<br>de notre engagement</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 md:mt-10 flex flex-wrap items-center gap-3 md:gap-6 text-xs md:text-sm text-brand-light/70 border-t border-slate-700/50 pt-4 md:pt-6">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-brand-light" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Réponse garantie sous 24h
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-brand-light" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            100% Digitale
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-brand-light" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Bureau physique à Bruxelles
+                        </div>
+                    </div>
+
+                    <!-- Badges de confiance : Google 5/5 + ITAA -->
+                    <div class="mt-4 md:mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-xl">
+                        <!-- Google 5/5 -->
+                        <div class="flex items-center gap-2.5 bg-white/[0.06] backdrop-blur-xl border border-white/[0.12] rounded-2xl py-2.5 px-5 flex-1 shadow-[0_8px_32px_rgba(0,0,0,0.2)] ring-1 ring-white/[0.05]">
+                            <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                            </svg>
+                            <span class="text-sm font-bold text-white">5/5</span>
+                            <div class="flex gap-0.5">
+                                <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            </div>
+                            <span class="text-xs text-brand-light/70">sur Google</span>
+                        </div>
+                        <!-- Cabinet certifié ITAA -->
+                        <div class="flex items-center gap-2.5 bg-white/[0.06] backdrop-blur-xl border border-white/[0.12] rounded-2xl py-2.5 px-5 flex-1 shadow-[0_8px_32px_rgba(0,0,0,0.2)] ring-1 ring-white/[0.05]">
+                            <svg class="w-5 h-5 text-brand-light flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                            <span class="text-sm font-bold text-white">Cabinet certifié ITAA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulaire de qualification -->
+                <div id="contact" class="bg-white rounded-xl shadow-2xl p-5 md:p-8 border border-slate-200/80 relative ring-1 ring-slate-100">
+                    
+                    <h3 class="text-2xl font-bold text-brand-navy mb-1">Échangeons sur votre situation</h3>
+                    <p class="text-brand-navy text-lg font-bold mb-5">Nous vous recontactons sous 24h !</p>
+                    
+                    <form class="space-y-4">
+                        <!-- Nom complet -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Nom complet</label>
+                            <input type="text" name="name" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-cta focus:border-brand-cta outline-none transition" placeholder="Jean Dupont" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Email professionnel</label>
+                            <input type="email" name="email" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-cta focus:border-brand-cta outline-none transition" placeholder="jean@masociete.be" required>
+                        </div>
+
+                        <!-- Numéro de téléphone -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Numéro de téléphone</label>
+                            <input type="tel" name="phone" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-cta focus:border-brand-cta outline-none transition" placeholder="+32 4XX XX XX XX" required>
+                        </div>
+
+                        <!-- Forme juridique — radio buttons -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Forme juridique</label>
+                            <div class="flex flex-wrap gap-3">
+                                <label class="flex items-center gap-2 cursor-pointer bg-slate-50 hover:bg-brand-light/30 border border-slate-200 rounded-lg px-4 py-2 transition">
+                                    <input type="radio" name="legal_form" value="SRL" class="w-4 h-4 text-brand-cta border-slate-300 focus:ring-brand-cta" required>
+                                    <span class="text-sm text-slate-700">SRL</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer bg-slate-50 hover:bg-brand-light/30 border border-slate-200 rounded-lg px-4 py-2 transition">
+                                    <input type="radio" name="legal_form" value="SA" class="w-4 h-4 text-brand-cta border-slate-300 focus:ring-brand-cta">
+                                    <span class="text-sm text-slate-700">SA</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer bg-slate-50 hover:bg-brand-light/30 border border-slate-200 rounded-lg px-4 py-2 transition">
+                                    <input type="radio" name="legal_form" value="Creation" class="w-4 h-4 text-brand-cta border-slate-300 focus:ring-brand-cta">
+                                    <span class="text-sm text-slate-700">En création</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Texte libre (point 1 : conservé) -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">Autres informations utiles</label>
+                            <textarea name="message" rows="2" class="w-full px-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-cta focus:border-brand-cta outline-none transition resize-vertical" placeholder="Décrivez brièvement votre situation ou vos attentes."></textarea>
+                        </div>
+
+                        <!-- CTA principal -->
+                        <button type="submit" class="w-full bg-brand-cta text-white font-bold py-3.5 px-4 rounded-full hover:bg-brand-ctaHover transition mt-2 flex justify-center items-center gap-2 shadow-lg shadow-brand-cta/20 text-base cta-pulse btn-scale">
+                            Être recontacté sous 24h
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                        </button>
+
+                        <!-- Réducteurs d'anxiété (point 9) -->
+                        <div class="flex items-center justify-center gap-4 text-xs text-slate-400 mt-2">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Sans engagement
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                Gratuit
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+                                Confidentiel
+                            </span>
+                        </div>
+
+                    </form>
+
+                    <!-- Calendly discret (point 8) -->
+                    <div class="mt-5 pt-4 border-t border-slate-100 text-center">
+                        <a href="https://swibel.be/book-a-call/" target="_blank" class="text-xs text-slate-400 hover:text-brand-cta transition">
+                            Ou réservez directement un créneau →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-12 md:py-24 bg-[#F5F5F5] relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-brand-primary/[0.05] blur-[120px]"></div>
+        <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-brand-cta/[0.04] blur-[100px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-6 reveal">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-navy mb-4">Ce que Swibel change pour votre société</h2>
+                <p class="text-lg text-slate-600">Comptabilité, fiscalité et conseil stratégique pour les dirigeants de PME, de holdings et de sociétés en croissance.</p>
+            </div>
+
+            <!-- Phrase d'approbation impactante -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-10 md:mb-16">
+                <div class="flex gap-0.5">
+                    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <p class="text-base font-bold text-brand-navy flex items-center gap-2">
+                    <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    Noté 5/5 sur Google
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Service 1 : Conseil Stratégique & Fiscalité -->
+                <div class="p-6 md:p-8 rounded-2xl bg-white/[0.45] backdrop-blur-lg border border-white/[0.5] shadow-[0_8px_32px_rgba(13,8,69,0.1)] ring-1 ring-white/[0.3] hover:shadow-[0_16px_48px_rgba(13,8,69,0.15)] hover:bg-white/[0.55] hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden reveal reveal-delay-1">
+                    <!-- Icône filigrane -->
+                    <div class="absolute -right-6 -bottom-6 opacity-[0.06] pointer-events-none">
+                        <svg class="w-40 h-40 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Conseil Stratégique &amp; Fiscalité</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Structurez votre patrimoine professionnel et anticipez chaque levier fiscal. Société de management, holding, rémunération du dirigeant : nous vous conseillons à chaque étape.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-700 font-medium">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-cta"></i> Application du régime VVPRbis (dividendes à 18%)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-cta"></i> Stratégie de rémunération optimale</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-cta"></i> Versements anticipés &amp; réserves de liquidation</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 : Comptabilité de société (LE PLUS DEMANDÉ, au centre) -->
+                <div class="p-6 md:p-8 rounded-2xl bg-white/[0.5] backdrop-blur-lg border-2 border-brand-cta/50 shadow-[0_8px_32px_rgba(0,113,227,0.12)] ring-1 ring-white/[0.3] relative md:-translate-y-4 hover:-translate-y-6 md:hover:-translate-y-6 hover:shadow-[0_16px_48px_rgba(0,113,227,0.2)] hover:bg-white/[0.6] transition-all duration-300 overflow-hidden reveal reveal-delay-2">
+                    <!-- Icône filigrane -->
+                    <div class="absolute -right-6 -bottom-6 opacity-[0.06] pointer-events-none">
+                        <svg class="w-40 h-40 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
+                    </div>
+                    <div class="absolute top-0 right-0 bg-brand-cta text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg z-10">Le plus demandé</div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Comptabilité de société (SRL/SA)</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Clôtures annuelles, déclarations ISoc, TVA et tableaux de bord financiers. Une gestion rigoureuse, 100% digitale, avec un interlocuteur dédié.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-700 font-medium">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-cta"></i> Bilans et comptes de résultats</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-cta"></i> Gestion complète de A à Z, vous n'avez à penser à rien</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-cta"></i> Respect de toutes les échéances</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 : Création de Société -->
+                <div class="p-6 md:p-8 rounded-2xl bg-white/[0.45] backdrop-blur-lg border border-white/[0.5] shadow-[0_8px_32px_rgba(13,8,69,0.1)] ring-1 ring-white/[0.3] hover:shadow-[0_16px_48px_rgba(13,8,69,0.15)] hover:bg-white/[0.55] hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden reveal reveal-delay-3">
+                    <!-- Icône filigrane -->
+                    <div class="absolute -right-6 -bottom-6 opacity-[0.06] pointer-events-none">
+                        <svg class="w-40 h-40 text-brand-navy" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Création de Société</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Créez votre société sur des bases solides, avec un accompagnement complet de la structuration à l'immatriculation. Plan financier, statuts et coordination notariale.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-700 font-medium">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-cta"></i> Plan financier solide</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-cta"></i> Choix de la forme juridique optimale</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-cta"></i> Accompagnement de A à Z</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Témoignages (vrais avis à remplacer) -->
+    <section class="py-12 md:py-24 bg-white border-t border-slate-200 relative overflow-hidden">
+        <!-- Orbes subtils pour le glassmorphism -->
+        <div class="absolute top-20 right-0 w-72 h-72 rounded-full bg-brand-primary/[0.05] blur-[100px]"></div>
+        <div class="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-brand-cta/[0.04] blur-[100px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 md:mb-16 reveal">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-4">Ils nous font confiance</h2>
+                <p class="text-lg text-slate-600">Des dirigeants et entrepreneurs qui ont choisi un accompagnement sur mesure.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Avis 1 — Guillaume Berlier (vrai avis swibel.be) -->
+                <div class="p-5 md:p-8 rounded-2xl bg-white/[0.45] backdrop-blur-lg border border-white/[0.5] shadow-[0_8px_32px_rgba(13,8,69,0.08)] ring-1 ring-white/[0.3] relative flex flex-col hover:bg-white/[0.55] hover:shadow-[0_12px_40px_rgba(13,8,69,0.12)] transition-all duration-300 reveal reveal-delay-1">
+                    <i data-lucide="quote" class="absolute top-6 right-6 w-8 h-8 text-slate-200"></i>
+                    <div class="flex gap-1 text-brand-cta mb-5">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-slate-700 font-medium leading-relaxed mb-6 flex-1">"J'ai eu plusieurs expert-comptable ces dernières années et je pense enfin avoir trouvé celui qui comprend mes attentes. Il n'hésite pas à me donner des conseils et à me soumettre des propositions pour améliorer ma situation professionnelle."</p>
+                    <div class="mt-auto">
+                        <p class="font-bold text-brand-navy">Guillaume Berlier</p>
+                        <p class="text-sm text-slate-500">Avocat fiscaliste</p>
+                    </div>
+                </div>
+
+                <!-- Avis 2 — Frédéric Delville (vrai avis swibel.be) -->
+                <div class="p-5 md:p-8 rounded-2xl bg-white/[0.45] backdrop-blur-lg border border-white/[0.5] shadow-[0_8px_32px_rgba(13,8,69,0.08)] ring-1 ring-white/[0.3] relative flex flex-col hover:bg-white/[0.55] hover:shadow-[0_12px_40px_rgba(13,8,69,0.12)] transition-all duration-300 reveal reveal-delay-2">
+                    <i data-lucide="quote" class="absolute top-6 right-6 w-8 h-8 text-slate-200"></i>
+                    <div class="flex gap-1 text-brand-cta mb-5">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-slate-700 font-medium leading-relaxed mb-6 flex-1">"Un cabinet d'expertise comptable qui allie parfaitement digitalisation et proximité humaine. L'équipe est réactive, professionnelle et toujours à l'écoute, ce qui rend la gestion comptable simple et efficace."</p>
+                    <div class="mt-auto">
+                        <p class="font-bold text-brand-navy">Frédéric Delville</p>
+                        <p class="text-sm text-slate-500">Chef d'une holding familiale</p>
+                    </div>
+                </div>
+
+                <!-- Avis 3 — Jessica Vasconcelos (vrai avis swibel.be) -->
+                <div class="p-5 md:p-8 rounded-2xl bg-white/[0.45] backdrop-blur-lg border border-white/[0.5] shadow-[0_8px_32px_rgba(13,8,69,0.08)] ring-1 ring-white/[0.3] relative flex flex-col hover:bg-white/[0.55] hover:shadow-[0_12px_40px_rgba(13,8,69,0.12)] transition-all duration-300 reveal reveal-delay-3">
+                    <i data-lucide="quote" class="absolute top-6 right-6 w-8 h-8 text-slate-200"></i>
+                    <div class="flex gap-1 text-brand-cta mb-5">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-slate-700 font-medium leading-relaxed mb-6 flex-1">"L'équipe a fait preuve d'une grande disponibilité pour aider dans toute situation. Je suis extrêmement reconnaissante pour tout le soutien apporté lors de la création de mon entreprise."</p>
+                    <div class="mt-auto">
+                        <p class="font-bold text-brand-navy">Jessica Vasconcelos</p>
+                        <p class="text-sm text-slate-500">Fondatrice de société</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pourquoi Swibel — chiffres concrets -->
+    <section class="py-12 md:py-20 bg-brand-navy border-y border-brand-primary/50 relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-brand-primary/20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brand-primary/10 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Metrics row — animated number counters -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 reveal mb-12 md:mb-16">
+                <!-- 5/5 Google -->
+                <div class="flex flex-col items-center gap-2 bg-white/[0.06] backdrop-blur-xl border border-white/[0.12] rounded-2xl py-8 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.2)] ring-1 ring-white/[0.05]">
+                    <div class="flex items-baseline">
+                        <span class="text-4xl md:text-5xl font-bold text-white metric-num-google" style="text-shadow: 0 0 10px rgba(34,197,94,0.3)">0</span>
+                        <span class="text-lg md:text-xl font-bold text-white/40">/5</span>
+                    </div>
+                    <span class="text-xs font-semibold text-white/60 uppercase tracking-wider">Note Google</span>
+                </div>
+
+                <!-- 100% Fidélité -->
+                <div class="flex flex-col items-center gap-2 bg-white/[0.06] backdrop-blur-xl border border-white/[0.12] rounded-2xl py-8 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.2)] ring-1 ring-white/[0.05]">
+                    <div class="flex items-baseline">
+                        <span class="text-4xl md:text-5xl font-bold text-white metric-num-fidelity" style="text-shadow: 0 0 10px rgba(34,197,94,0.3)">0</span>
+                        <span class="text-lg md:text-xl font-bold text-white/40">%</span>
+                    </div>
+                    <span class="text-xs font-semibold text-white/60 uppercase tracking-wider">Taux de fidélité</span>
+                </div>
+
+                <!-- <24h Réponse -->
+                <div class="flex flex-col items-center gap-2 bg-white/[0.06] backdrop-blur-xl border border-white/[0.12] rounded-2xl py-8 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.2)] ring-1 ring-white/[0.05]">
+                    <div class="flex items-baseline">
+                        <span class="text-4xl md:text-5xl font-bold text-white metric-num-response" style="text-shadow: 0 0 10px rgba(34,197,94,0.3)">24</span>
+                        <span class="text-lg md:text-xl font-bold text-white/40">h</span>
+                    </div>
+                    <span class="text-xs font-semibold text-white/60 uppercase tracking-wider">Temps de réponse</span>
+                </div>
+
+                <!-- ITAA -->
+                <div class="flex flex-col items-center gap-2 bg-white/[0.06] backdrop-blur-xl border border-white/[0.12] rounded-2xl py-8 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.2)] ring-1 ring-white/[0.05]">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-8 h-8 md:w-10 md:h-10 text-white metric-icon-itaa" style="opacity:0; text-shadow: 0 0 10px rgba(34,197,94,0.3)" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                        <span class="text-2xl md:text-3xl font-bold text-white metric-text-itaa" style="opacity:0">ITAA</span>
+                    </div>
+                    <span class="text-xs font-semibold text-white/60 uppercase tracking-wider">Cabinet certifié</span>
+                </div>
+            </div>
+
+            <!-- Citation condensée -->
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-white italic leading-relaxed text-base md:text-lg">
+                    "Notre objectif est d'accompagner chaque dirigeant comme un véritable partenaire stratégique. Comprendre ses enjeux, anticiper les évolutions fiscales, et être disponibles quand il a besoin d'une réponse en moins de 24h."
+                </p>
+                <p class="text-brand-light/50 text-sm mt-4">— La direction Swibel · Expert-Comptable Certifié ITAA</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Le coût de l'inaction -->
+    <section class="py-12 md:py-20 bg-[#F5F5F5]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 md:mb-14 reveal">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-navy mb-3">Ce que vous pourriez perdre chaque année</h2>
+                <p class="text-base text-slate-500 max-w-2xl mx-auto">Sans un conseil fiscal adapté, ces montants passent inaperçus. Avec le bon accompagnement, ils reviennent dans votre société.</p>
+            </div>
+
+            <div class="space-y-6 reveal">
+                <!-- Bar 1 : Versements anticipés -->
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-baseline">
+                        <span class="text-sm font-semibold text-brand-navy">Versements anticipés non optimisés</span>
+                        <span class="text-sm font-bold text-red-500 cost-bar-value-1">EUR 0</span>
+                    </div>
+                    <div class="w-full bg-slate-200 rounded-full h-4 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-red-400 to-red-500 rounded-full cost-bar-fill-1" style="width: 0%; transition: width 1.5s ease-out;"></div>
+                    </div>
+                    <p class="text-xs text-slate-400">Simulation : base imposable de EUR 100.000 · Majoration de 6,75% en l'absence de versements anticipés suffisants</p>
+                </div>
+
+                <!-- Bar 2 : Rémunération dirigeant -->
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-baseline">
+                        <span class="text-sm font-semibold text-brand-navy">Rémunération dirigeant mal structurée</span>
+                        <span class="text-sm font-bold text-red-500 cost-bar-value-2">EUR 0</span>
+                    </div>
+                    <div class="w-full bg-slate-200 rounded-full h-4 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-red-400 to-red-500 rounded-full cost-bar-fill-2" style="width: 0%; transition: width 1.8s ease-out;"></div>
+                    </div>
+                    <p class="text-xs text-slate-400">Simulation : rémunération brute de EUR 60.000 · Différence entre un schéma optimisé et non structuré (IPP + cotisations sociales)</p>
+                </div>
+
+                <!-- Bar 3 : Dividendes 30% vs VVPRbis 18% -->
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-baseline">
+                        <span class="text-sm font-semibold text-brand-navy">Dividendes au taux classique de 30% au lieu du VVPRbis à 18%</span>
+                        <span class="text-sm font-bold text-red-500 cost-bar-value-3">EUR 0</span>
+                    </div>
+                    <div class="w-full bg-slate-200 rounded-full h-4 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-red-400 to-red-500 rounded-full cost-bar-fill-3" style="width: 0%; transition: width 2s ease-out;"></div>
+                    </div>
+                    <p class="text-xs text-slate-400">Simulation : distribution de EUR 100.000 de dividendes · Précompte mobilier de 30% (EUR 30.000) vs 18% VVPRbis (EUR 18.000)</p>
+                </div>
+            </div>
+
+            <!-- Total -->
+            <div class="mt-8 pt-6 border-t-2 border-brand-navy/10 flex flex-col sm:flex-row justify-between items-center gap-4 reveal">
+                <div>
+                    <p class="text-lg font-bold text-brand-navy">Total estimé des pertes annuelles</p>
+                    <p class="text-xs text-slate-400">Simulations indicatives · Les montants réels dépendent de votre situation spécifique</p>
+                </div>
+                <p class="text-3xl md:text-4xl font-bold text-red-500 cost-bar-total">EUR 0</p>
+            </div>
+
+            <!-- CTA contextuel -->
+            <div class="mt-8 text-center reveal">
+                <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-brand-cta text-white px-8 py-3.5 rounded-full font-bold hover:bg-brand-ctaHover transition shadow-lg shadow-brand-cta/30 btn-scale">
+                    Vérifier ma situation fiscale
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="py-12 md:py-20 bg-brand-navy relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Prenez 2 minutes. Nous faisons le reste.</h2>
+            <p class="text-base md:text-lg text-brand-light/70 mb-6 md:mb-8">
+                Un premier échange sans engagement pour comprendre vos enjeux et vous montrer concrètement ce que Swibel peut apporter à votre société.
+            </p>
+            <div class="flex flex-col items-center gap-4 max-w-md mx-auto">
+                <a href="#contact" class="flex items-center justify-center gap-2 bg-brand-cta text-white px-8 py-4 rounded-full font-bold hover:bg-brand-ctaHover transition shadow-lg shadow-brand-cta/40 w-full btn-scale cta-pulse">
+                    Être recontacté sous 24h
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                </a>
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full">
+                    <a href="tel:+3228088963" class="flex items-center justify-center gap-2 border-2 border-brand-light/30 text-white px-4 py-3 rounded-full font-bold hover:bg-white/10 transition flex-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        +32 2 808 89 63
+                    </a>
+                    <a href="mailto:admin@swibel.be" class="flex items-center justify-center gap-2 border-2 border-brand-light/30 text-white px-4 py-3 rounded-full font-bold hover:bg-white/10 transition flex-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                        admin@swibel.be
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Ligne illuminée séparatrice -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <div class="h-px bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
+            <div class="h-px bg-gradient-to-r from-transparent via-white/30 to-transparent blur-sm -mt-px"></div>
+            <div class="h-0.5 bg-gradient-to-r from-transparent via-white/20 to-transparent blur-md -mt-0.5"></div>
+        </div>
+    </section>
+
+    <!-- Mobile sticky CTA bar -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-brand-navy/95 backdrop-blur-md border-t border-brand-primary/30 p-3 flex gap-2">
+        <a href="#contact" class="flex-1 flex items-center justify-center gap-2 bg-brand-cta text-white py-3 rounded-full font-bold text-sm shadow-lg">
+            Nous contacter
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </a>
+        <a href="tel:+3228088963" class="flex items-center justify-center gap-2 bg-white/10 text-white py-3 px-4 rounded-full font-bold text-sm border border-white/20">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Appeler
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-navy pt-8 md:pt-12 pb-20 md:pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-4">
+                    <a href="https://swibel.be" target="_blank">
+                        <img src="Artboard 8@3x.png" alt="Swibel Logo" class="h-8 w-auto object-contain" onerror="this.onerror=null; this.outerHTML='<span class=\'font-bold text-xl text-white\'>Swibel.</span>'">
+                    </a>
+                </div>
+                <div class="text-brand-light/50 text-xs flex flex-wrap gap-x-4 gap-y-1 items-center justify-center">
+                    <span>Uccle, Bruxelles</span>
+                    <span class="text-brand-light/20">·</span>
+                    <span>Cabinet certifié ITAA</span>
+                    <span class="text-brand-light/20">·</span>
+                    <span>&copy; 2026 Swibel</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const duration = 2000;
+            const fps = 60;
+            const totalFrames = duration / (1000 / fps);
+            const totalDash = 175.9;
+
+            function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+            // ===== HERO COUNTERS =====
+            const googleEl = document.querySelector('.counter-google');
+            const googleRing = document.querySelector('.counter-ring-google');
+            const fidelityEl = document.querySelector('.counter-fidelity');
+            const fidelityRing = document.querySelector('.counter-ring-fidelity');
+            const stars = document.querySelectorAll('.star-anim');
+
+            let heroFrame = 0;
+            function animateHero() {
+                heroFrame++;
+                const progress = Math.min(heroFrame / totalFrames, 1);
+                const eased = easeOut(progress);
+                if (googleEl) googleEl.textContent = Math.round(eased * 5);
+                if (googleRing) googleRing.style.strokeDashoffset = totalDash - (eased * totalDash);
+                stars.forEach((star, i) => {
+                    if (eased >= (i + 1) / 5) {
+                        star.style.opacity = '1';
+                        star.style.transform = 'scale(1)';
+                        star.style.transition = 'opacity 0.3s, transform 0.3s';
+                    }
+                });
+                if (fidelityEl) fidelityEl.textContent = Math.round(eased * 100);
+                if (fidelityRing) fidelityRing.style.strokeDashoffset = totalDash - (eased * totalDash);
+                if (progress < 1) requestAnimationFrame(animateHero);
+            }
+
+            if (googleEl) {
+                const heroObs = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) { setTimeout(animateHero, 500); heroObs.unobserve(entry.target); }
+                    });
+                }, { threshold: 0.3 });
+                heroObs.observe(googleEl);
+            }
+
+            // ===== METRICS SECTION =====
+            const mGoogleEl = document.querySelector('.metric-num-google');
+            const mFidelityEl = document.querySelector('.metric-num-fidelity');
+            const mResponseEl = document.querySelector('.metric-num-response');
+            const mItaaIcon = document.querySelector('.metric-icon-itaa');
+            const mItaaText = document.querySelector('.metric-text-itaa');
+
+            let metricFrame = 0;
+            function animateMetrics() {
+                metricFrame++;
+                const progress = Math.min(metricFrame / totalFrames, 1);
+                const eased = easeOut(progress);
+                if (mGoogleEl) mGoogleEl.textContent = Math.round(eased * 5);
+                if (mFidelityEl) mFidelityEl.textContent = Math.round(eased * 100);
+                if (mResponseEl) { const val = Math.round(72 - (eased * 48)); mResponseEl.textContent = val < 24 ? 24 : val; }
+                if (eased >= 0.6) {
+                    if (mItaaIcon) { mItaaIcon.style.opacity = '1'; mItaaIcon.style.transition = 'opacity 0.6s'; }
+                    if (mItaaText) { mItaaText.style.opacity = '1'; mItaaText.style.transition = 'opacity 0.6s'; }
+                }
+                if (progress < 1) requestAnimationFrame(animateMetrics);
+            }
+
+            if (mGoogleEl) {
+                const metricObs = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) { setTimeout(animateMetrics, 300); metricObs.unobserve(entry.target); }
+                    });
+                }, { threshold: 0.2 });
+                metricObs.observe(mGoogleEl);
+            }
+
+            // ===== COST OF INACTION BARS =====
+            const costBar1 = document.querySelector('.cost-bar-fill-1');
+            const costVal1 = document.querySelector('.cost-bar-value-1');
+            const costBar2 = document.querySelector('.cost-bar-fill-2');
+            const costVal2 = document.querySelector('.cost-bar-value-2');
+            const costBar3 = document.querySelector('.cost-bar-fill-3');
+            const costVal3 = document.querySelector('.cost-bar-value-3');
+            const costTotal = document.querySelector('.cost-bar-total');
+
+            const costTargets = [
+                { bar: costBar1, val: costVal1, amount: 6750, width: 22 },
+                { bar: costBar2, val: costVal2, amount: 12000, width: 39 },
+                { bar: costBar3, val: costVal3, amount: 12000, width: 39 }
+            ];
+            const costTotalAmount = 30750;
+
+            let costFrame = 0;
+            function animateCost() {
+                costFrame++;
+                const progress = Math.min(costFrame / totalFrames, 1);
+                const eased = easeOut(progress);
+                costTargets.forEach(t => {
+                    if (t.bar) t.bar.style.width = (eased * t.width) + '%';
+                    if (t.val) t.val.textContent = 'EUR ' + Math.round(eased * t.amount).toLocaleString('fr-BE');
+                });
+                if (costTotal) costTotal.textContent = 'EUR ' + Math.round(eased * costTotalAmount).toLocaleString('fr-BE');
+                if (progress < 1) requestAnimationFrame(animateCost);
+            }
+
+            if (costBar1) {
+                const costObs = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) { setTimeout(animateCost, 400); costObs.unobserve(entry.target); }
+                    });
+                }, { threshold: 0.2 });
+                costObs.observe(costBar1);
+            }
+
+            // ===== SCROLL REVEAL ANIMATIONS =====
+            const revealEls = document.querySelectorAll('.reveal');
+            const revealObs = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible');
+                });
+            }, { threshold: 0.15 });
+            revealEls.forEach(el => revealObs.observe(el));
+        });
+    </script>
+</body>
+</html>
