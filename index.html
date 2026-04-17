@@ -284,7 +284,7 @@
                     <h3 class="text-2xl font-bold text-brand-navy mb-1">Échangeons sur votre situation</h3>
                     <p class="text-brand-navy text-lg font-bold mb-5">Nous vous recontactons sous 24h !</p>
                     
-                    <form class="space-y-4">
+                    <form id="contactForm" class="space-y-4">
                         <!-- Nom complet -->
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1">Nom complet</label>
@@ -351,6 +351,19 @@
                         </div>
 
                     </form>
+
+                    <!-- Message de succès -->
+                    <div id="formSuccess" class="hidden mt-4 p-4 bg-green-50 border border-green-200 rounded-xl text-center">
+                        <svg class="w-10 h-10 text-green-500 mx-auto mb-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <p class="text-green-800 font-bold text-sm">Merci ! Votre demande a bien été envoyée.</p>
+                        <p class="text-green-600 text-xs mt-1">Nous vous recontactons sous 24h.</p>
+                    </div>
+
+                    <!-- Message d'erreur -->
+                    <div id="formError" class="hidden mt-4 p-4 bg-red-50 border border-red-200 rounded-xl text-center">
+                        <p class="text-red-800 font-bold text-sm">Une erreur est survenue.</p>
+                        <p class="text-red-600 text-xs mt-1">Veuillez réessayer ou nous contacter par téléphone.</p>
+                    </div>
 
                     <!-- Calendly discret (point 8) -->
                     <div class="mt-5 pt-4 border-t border-slate-100 text-center">
@@ -823,6 +836,53 @@
                 });
             }, { threshold: 0.15 });
             revealEls.forEach(el => revealObs.observe(el));
+
+            // ===== FORM SUBMISSION VIA RESEND API =====
+            const form = document.getElementById('contactForm');
+            const successMsg = document.getElementById('formSuccess');
+            const errorMsg = document.getElementById('formError');
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalHTML = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg> Envoi en cours...';
+
+                successMsg.classList.add('hidden');
+                errorMsg.classList.add('hidden');
+
+                const formData = new FormData(form);
+                const data = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    legal_form: formData.get('legal_form'),
+                    message: formData.get('message')
+                };
+
+                try {
+                    const response = await fetch('/api/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (response.ok) {
+                        form.classList.add('hidden');
+                        successMsg.classList.remove('hidden');
+                    } else {
+                        errorMsg.classList.remove('hidden');
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalHTML;
+                    }
+                } catch (err) {
+                    errorMsg.classList.remove('hidden');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalHTML;
+                }
+            });
         });
     </script>
 </body>
