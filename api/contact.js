@@ -63,7 +63,7 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         from: 'Swibel Onboarding <onboarding@lp.swibel.be>',
-        to: ['mimounmehdi94@gmail.com'],
+        to: ['mehdi.mimoun@swibel.be'],
         subject: `Nouveau lead : ${name} — ${legal_form || 'Forme non precisee'}`,
         html: htmlContent,
         reply_to: email,
